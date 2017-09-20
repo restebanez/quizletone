@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  #get 'sets/index'
-
-  #get 'sets/show'
   resources :sets, only: [:index, :show]
 
   root 'sets#index'
