@@ -1,5 +1,5 @@
 require 'rest-client'
-require 'json'
+require 'yaml'
 require "awesome_print"
 
 class QuizletSet
@@ -11,7 +11,9 @@ class QuizletSet
   USERS_URL = "#{BASE_URL}/#{USERNAME}"
 
   def self.list
-    JSON.parse(
-        RestClient.get(USERS_URL, {params: {client_id: CLIENT_ID}}).body)
+    response_body = RestClient.get(USERS_URL, {params: {client_id: CLIENT_ID}}).body
+    YAML.load(response_body)["sets"].map do |set|
+      set.slice("id", "url", "title")
+    end
   end
 end
