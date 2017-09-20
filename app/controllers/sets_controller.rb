@@ -1,6 +1,6 @@
 class SetsController < ApplicationController
   def index
-    render plain: QuizletSet.list
+    @quizlet_sets = QuizletSet.list
   end
 
   def show

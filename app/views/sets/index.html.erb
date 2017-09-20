@@ -1,2 +1,9 @@
-<h1>Sets#index</h1>
-<p>Find me in app/views/sets/index.html.erb</p>
+<h1>Sets</h1>
+<ul>
+  <% @quizlet_sets.each do |set| %>
+    <li>
+       <%= link_to set["title"], set_path(set["id"]) %> <br>
+        <%= set["url"] %>
+    </li>
+  <% end %>
+</ul>
