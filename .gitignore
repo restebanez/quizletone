@@ -21,3 +21,6 @@
 /public/packs-test
 /node_modules
 .idea/*
+
+public/assets
+#!public/assets/cljs/target/main.js
