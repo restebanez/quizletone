@@ -24,3 +24,7 @@
 
 public/assets
 #!public/assets/cljs/target/main.js
+lib/assets/cljs/src/.DS_Store
+lib/assets/cljs/src/.idea/modules.xml
+lib/assets/cljs/src/.idea/src.iml
+lib/assets/cljs/src/.idea/workspace.xml
